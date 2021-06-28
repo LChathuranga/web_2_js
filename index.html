@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html css js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="body">
+        <nav>
+            <img src="images/logo.png" alt="logo">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="info">
+            <div class="none"></div>
+            <img src="images/mobile.png" alt="">
+            <div class="circule" id="circule">
+                
+                <div class="feature one">
+                    <img src="images/camera.png" alt="">
+                    <div class="des">
+                        <h3>Camera</h3>
+                        <p>8mp front camera and <br>13mp back camera</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/battery.png" alt="">
+                    <div class="des">
+                        <h3>Battery</h3>
+                        <p>5200Wh battery</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/display.png" alt="">
+                    <div class="des">
+                        <h3>Display</h3>
+                        <p>Super amoled display</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/processor.png" alt="">
+                    <div class="des">
+                        <h3>Processor</h3>
+                        <p>1.5GHz super speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="control">
+            <img src="images/arrow.png" alt="" id="upBtn" onclick="myFuncUp()">
+            <p>Features</p>
+            <img src="images/arrow.png" alt="" id="downBtn" onclick="myFuncDown()">
+        </div>
+    </div>
+    <script>
+        var circule = document.getElementById("circule");
+        var rotateValue = circule.style.transform;
+        var rotateSum;
+
+        function myFuncUp(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circule.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        function myFuncDown(){
+            rotateSum = rotateValue + "rotate(90deg)";
+            circule.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+    </script>
+</body>
+</html>
